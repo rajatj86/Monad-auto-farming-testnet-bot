@@ -1,49 +1,109 @@
-Monad Testnet Automation Bot
-A user-friendly GUI-based bot for automating interactions on the Monad Testnet, including contract deployment, staking/unstaking, token swapping, voting, and wallet generation.
-Prerequisites
-
-Python 3.8+
-Node.js (for PM2, optional)
-Monad Testnet wallet with MON tokens
-
-Setup
-
-Navigate to the project directory:
-cd monad-bot
+Step 1: Set Up Your Computer
+Install Python:
+If Python isn’t installed on your computer, download and install it.
+Go to the official Python website: https://www.python.org/downloads/.
+Download the latest version (e.g., Python 3.11 or higher).
+During installation:
+Check the box that says “Add Python to PATH” (important for running Python from the command line).
+Select “Install Now.”
+After installation, open the Command Prompt (press Win + R, type cmd, and press Enter) and type:
 
 
-Install dependencies:
+python --version
+
+Step 2 
+Create a Folder for Your Project:
+
+cd Desktop
+mkdir monad_testnet
+cd monad_testnet
+
+
+Step 3
+Install Required Python Libraries
+
+pip install web3>=6.21.0 python-dotenv==1.0.0 colorama==0.4.6 eth-account>=0.13.0 py-solc-x>=2.0.3 tk>=0.1.0
+
+Step 4
+Create the Script File
+Open Notepad++ (or Notepad if you didn’t install Notepad++).
+Copy the entire Python script I provided earlier 
+Click File > Save As.
+Navigate to the monad_testnet folder on your Desktop (e.g., C:\Users\YourUsername\Desktop\monad_testnet).
+
+Name the file main.py (make sure to include .py at the end).
+
+Step 5
+Create the Private Key File
+The script requires a file named pvkey.txt containing your wallet’s private key. This is sensitive information, so handle it carefully.
+
+Get Your Private Key:
+You need the private key of your Monad testnet wallet (e.g., from MetaMask or another wallet).
+
+Open Notepad++ (or Notepad).
+Paste your private key (e.g., 0x1234...abcd) on the first line.
+Press Enter to ensure there’s a blank line after the key.
+Save the file:
+Click File > Save As.
+Navigate to the monad_testnet folder (C:\Users\YourUsername\Desktop\monad_testnet).
+Name the file pvkey.txt.
+Set “Save as type” to “All files (.)” in Notepad (not needed in Notepad++).
+Click Save.
+
+
+Step 6: Fund Your Wallet with Testnet MON
+
+Step 7: Run the Script
+
+1. Navigate to the Project Folder:
+In the Command Prompt, ensure you’re in the monad_testnet folder. If not, type:
+ cd C:\Users\YourUsername\Desktop\monad_testnet
+Replace YourUsername with your actual Windows username.
+
+2. Execute the Script: python main.py
+
+════════════════════════════════════════════════════════════
+│                MONAD TESTNET INTERACTION                 │
+════════════════════════════════════════════════════════════
+👥 Accounts: 1
+┌──────────────────────────────────────────────────────────┐
+│                    SELECT PLATFORM                       │
+└──────────────────────────────────────────────────────────┘
+1. Apriori
+2. Ambient DEX
+3. Magma
+4. iZumi
+5. Bima
+6. Kintsu
+7. Monorail
+8. Rubic
+9. Custom Swap
+0. Exit
+➤ Enter choice:
+
+
+Interact with the Script:
+The script shows a list of platforms (Apriori, Ambient DEX, etc.).
+Type a number (e.g., 1 for Apriori, 6 for Kintsu) and press Enter.
+Next, it asks for the number of cycles (how many times to run the action). Type 1 (or another number) and press Enter.
+The script will perform actions (e.g., stake, unstake) and show progress with messages like:
+
+
+**➤ stake          | Amount: 0.0423 MON
+➤ stake          | Tx: https://testnet.monadexplorer.com/tx/0x...**
 
 
 
-Running the Bot
+If You Need Help
 
-First Run (Foreground):
-python main.py
+If any step fails (e.g., an error during installation, script execution, or funding), let me know:
+The exact step number.
+The error message (copy-paste it).
+Your operating system (Windows, Linux, Mac).
+If you’re unsure about your wallet, private key, or testnet setup, I can provide more details.
+For funding issues, I can search for alternative faucets or guide you through community channels.
 
- This opens the GUI. Enter your private key (kept in memory, not saved) and contract addresses as needed. Click buttons to perform actions.
 
-Usage
 
-Load Wallet: Enter your private key in the GUI and click "Load Wallet".
-Enter Contract Address: For staking, swapping, or voting, input the target contract address.
-Perform Actions: Click buttons to deploy contracts, stake/unstake MON, swap tokens, vote, or generate new wallets. Confirm each transaction in the pop-up.
-View Logs: The output log displays transaction details and errors.
 
-Security Notes
-
-Private keys are not stored on disk.
-Transactions require user confirmation.
-Balance checks prevent wallet draining.
-Always verify contract addresses before interacting.
-
-Troubleshooting
-
-RPC Connection Issues: Ensure internet connectivity and try again.
-Insufficient Balance: Fund your wallet with MON tokens.
-Invalid Contract Address: Verify the contract address on the Monad Testnet explorer.
-
-Credits
-
-Developed by [Rajat]
 
