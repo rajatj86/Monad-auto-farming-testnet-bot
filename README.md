@@ -53,7 +53,7 @@ Click File > Save As.
 Navigate to the monad_testnet folder (C:\Users\YourUsername\Desktop\monad_testnet).
 Name the file
 ```bash
-pvkey.txt.
+pvkey.txt
 ```
 Set “Save as type” to “All files (.)” in Notepad (not needed in Notepad++).
 Click Save.
