@@ -1,1 +1,7 @@
 
+web3>=6.21.0
+python-dotenv==1.0.0
+colorama==0.4.6
+eth-account>=0.13.0
+py-solc-x>=2.0.3
+tk>=0.1.0
